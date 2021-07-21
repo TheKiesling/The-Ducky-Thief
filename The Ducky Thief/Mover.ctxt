@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Mover
+comment0.text=\r\n\ A\ Mover\ is\ an\ actor\ that\ also\ has\ 'move'\ and\ 'turn'\ ability.\ Both\ moving\ and\ turning\ \r\n\ are\ relative\ to\ its\ current\ position.\ When\ moving,\ the\ Mover\ will\ move\ in\ the\ direction\ \r\n\ it\ is\ currently\ facing.\r\n\ \r\n\ Both\ 'move'\ and\ 'turn'\ methods\ are\ available\ with\ or\ without\ parameters.\r\n\ \r\n\ The\ 'Mover'\ class\ is\ a\ subclass\ of\ Actor.\ It\ can\ be\ used\ by\ creating\ subclasses,\ or\r\n\ copied\ into\ scenarios\ and\ edited\ inline.\r\n\ \r\n\ The\ initial\ direction\ is\ to\ the\ right.\ Thus,\ this\ class\ works\ best\ with\ images\ that\r\n\ face\ right\ when\ not\ rotated.\r\n\ \r\n\ This\ class\ can\ also\ check\ whether\ we\ are\ close\ to\ the\ edge\ of\ the\ world.\r\n\ \r\n\ @author\ Michael\ Kolling\r\n\ @version\ 1.0\ (July\ 2007)\r\n
+comment1.params=
+comment1.target=void\ turn()
+comment1.text=\r\n\ Turn\ 90\ degrees\ to\ the\ right\ (clockwise).\r\n
+comment2.params=angle
+comment2.target=void\ turn(int)
+comment2.text=\r\n\ Turn\ 'angle'\ degrees\ towards\ the\ right\ (clockwise).\r\n
+comment3.params=
+comment3.target=void\ move()
+comment3.text=\r\n\ Move\ a\ bit\ forward\ in\ the\ current\ direction.\r\n
+comment4.params=distance
+comment4.target=void\ move(double)
+comment4.text=\r\n\ Move\ a\ specified\ distance\ forward\ in\ the\ current\ direction.\r\n
+comment5.params=
+comment5.target=boolean\ atWorldEdge()
+comment5.text=\r\n\ Test\ if\ we\ are\ close\ to\ one\ of\ the\ edges\ of\ the\ world.\ Return\ true\ is\ we\ are.\r\n
+numComments=6

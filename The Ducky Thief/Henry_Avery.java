@@ -22,6 +22,7 @@ public class Henry_Avery extends Actor
 {
     //-----------------------------VARIABLES-----------------------------
     private Gun gun = new Gun();
+    private Shovel shovel = new Shovel();
     
     
     //-----------------------------FUNCIONES-----------------------------
@@ -63,11 +64,23 @@ public class Henry_Avery extends Actor
         if(Greenfoot.isKeyDown("shift")) {
             shot();
         }
+        
+        
+        getWorld().removeObject(shovel);
+        
+        if(Greenfoot.isKeyDown("control")){
+            dig();
+        }
     }
        
     //-----Función de sacar la pistola-----
-    public void shot() {
+    private void shot() {
         //Crea una pistola en la posición del brazo del pirata
-        getWorld().addObject(gun, getX(), getY()-15);
+        getWorld().addObject(gun, getX(), getY()+5);
     }
+    
+    private void dig(){
+        getWorld().addObject(shovel, getX()-10, getY()-5);
+    }
+    
 }

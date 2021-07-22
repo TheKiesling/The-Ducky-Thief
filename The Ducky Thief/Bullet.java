@@ -29,8 +29,12 @@ public class Bullet extends Mover
         int xpos = getX();
         
         //Se evalúa si la bala sigue en el mundo
-        if (ypos < 699 && ypos > 0 && getX() > 0 && getX() < 699)
+        if (ypos < 699 && ypos > 0 && getX() > 0 && getX() < 699){
             move(10);
+            Actor thief = getOneIntersectingObject(Thief.class);
+                if (thief != null) 
+                    getWorld().removeObject(thief);
+        }
             
         //De no hacerlo, eliminar la bala
         else

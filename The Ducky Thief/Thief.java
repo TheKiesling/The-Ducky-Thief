@@ -1,37 +1,53 @@
+/*
+#      #    #######    ########   #######   #          #######   ##      #    #########
+#     #        #       #          #         #             #      # #     #    #
+#    #         #       #          #         #             #      #  #    #    #
+####           #       #####      #######   #             #      #   #   #    #    ####
+#    #         #       #                #   #             #      #    #  #    #       #
+#     #        #       #                #   #             #      #     # #    #       #
+#      #    ########   ########   #######   ########   #######   #      ##    #########
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Thief here.
+ * Clase del ladrón (enemigo)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (José Pablo Kiesling Lange) 
+ * @version 
+ *          (Creación: 21/07/2021)
+ *          (Primera modificación: 21/07/2021)
  */
 public class Thief extends Actor
 {
-
-    
+    //-----------------------------VARIABLES-----------------------------
     private int x;
     private int y;
     
-
+    //-----------------------------FUNCIONES-----------------------------
+    //-----Función de acción-----
     public void act() 
     {
         x = getX();
         y = getY();
         
         move(2);
+        
+        //Giro del personaje usando números randoms
         if (Greenfoot.getRandomNumber(100) < 10)
-            
             turn(Greenfoot.getRandomNumber(20));
         
+        //Si se topa con un límite girará para que no se quede atorado
         if (x <= 25 || y <= 200 || x >= getWorld().getWidth()-25 || y >= getWorld().getHeight()-25)
             turn(7);
-            
+        
+        //Si toca a Henry Avery lo mata, y tiene que iniciar un nuevo juego
         Actor henry_Avery = getOneIntersectingObject(Henry_Avery.class);
         if (henry_Avery != null) {
             Greenfoot.setWorld(new Background());
         }
         
+        //Si el ladrón encuentra el tesoro, tiene que iniciar un nuevo juego
         Actor chest = getOneIntersectingObject(Chest.class);
         if (chest != null) {
             Greenfoot.setWorld(new Background());

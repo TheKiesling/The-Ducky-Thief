@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Henry_Avery
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Henry_Avery\ here.\r\n\ Clase\ del\ actor\ principal\ (controlar\u00E1\ el\ usuario)\r\n\ \r\n\ @author\ (Jos\u00E9\ Pablo\ Kiesling\ Lange)\ \r\n\ @version\ \r\n\ \ \ \ \ \ \ \ \ \ (Creaci\u00F3n\:\ 20/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Primera\ modificaci\u00F3n\:\ 20/07/2021)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Henry_Avery\ here.\r\n\ Clase\ del\ actor\ principal\ (controlar\u00E1\ el\ usuario)\r\n\ \r\n\ @author\ (Jos\u00E9\ Pablo\ Kiesling\ Lange)\ \r\n\ @version\ \r\n\ \ \ \ \ \ \ \ \ \ (Creaci\u00F3n\:\ 20/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Primera\ modificaci\u00F3n\:\ 20/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Segunda\ modificaci\u00F3n\:\ 21/07/2021)\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

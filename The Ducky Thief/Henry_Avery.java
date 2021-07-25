@@ -17,6 +17,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 
  *          (Creación: 20/07/2021)
  *          (Primera modificación: 20/07/2021)
+ *          (Segunda modificación: 21/07/2021)
  */
 public class Henry_Avery extends Actor
 {
@@ -58,14 +59,14 @@ public class Henry_Avery extends Actor
         
         //-----Sacar la pistola----
             //Sintaxis: Eliminar la pistola, y llamar a la función que crea la pistola cada vez que se quiera disparar si se mantiene el botón
-            
         getWorld().removeObject(gun);
         
         if(Greenfoot.isKeyDown("shift")) {
             shot();
         }
         
-        
+        //-----Sacar la pala----
+            //Sintaxis: Eliminar la pala, y llamar a la función que crea la pistola cada vez que se quiera desenterrar manteniendo el botón
         getWorld().removeObject(shovel);
         
         if(Greenfoot.isKeyDown("control")){
@@ -79,7 +80,9 @@ public class Henry_Avery extends Actor
         getWorld().addObject(gun, getX(), getY()+5);
     }
     
+    //-----Función de sacar la pala-----
     private void dig(){
+        //Crea una pala en la posición del brazo del pirata
         getWorld().addObject(shovel, getX()-10, getY()-5);
     }
     

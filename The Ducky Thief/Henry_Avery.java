@@ -25,11 +25,9 @@ public class Henry_Avery extends Actor
     private Gun gun = new Gun();
     private Shovel shovel = new Shovel();
     
-    
     //-----------------------------FUNCIONES-----------------------------
     //-----Función de acción-----
     public void act(){  
-        
         //------Movimiento del personaje-----
             //Sintaxis: Evaluar el botón presionado y obtener la componente según sea el caso y sumar o restar dicha componente para que se mueva
         

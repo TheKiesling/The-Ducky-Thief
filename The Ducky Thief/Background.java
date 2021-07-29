@@ -12,7 +12,9 @@ public class Background extends World
     private int amountChest = 0;
     private int x = 0;
     private int y = 0;
-
+    public static int chest = 0;
+    public static int kills = 0;
+    
     /**
      * Constructor for objects of class Background.
      * 
@@ -22,7 +24,7 @@ public class Background extends World
         // Create a new world with 700x700 cells with a cell size of 1x1 pixels.
         super(700, 700, 1); 
         prepare();
-        
+       
     }
 
     /**
@@ -33,7 +35,7 @@ public class Background extends World
     {
         Henry_Avery henry_Avery = new Henry_Avery();
         addObject(henry_Avery,350,400);
-        Greenfoot.delay(150);
+        Greenfoot.delay(250);        
     }
     
     private int getRandom(int begin, int end){
@@ -41,7 +43,9 @@ public class Background extends World
         return number;
     }
     
-    public void act(){
+    public void act(){ 
+        
+        showText("Chest: " + chest, 120,30);
         
         while (amountDucky < 6){
             x = y = 0;

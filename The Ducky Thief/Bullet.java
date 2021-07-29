@@ -20,6 +20,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Mover
 {
+    //-----------------------------VARIABLES-----------------------------
+    Background thisGame;
+    
     //-----------------------------FUNCIONES-----------------------------
     //-----Función de acción-----
     public void act() 

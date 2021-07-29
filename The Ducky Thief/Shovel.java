@@ -22,14 +22,19 @@ public class Shovel extends Actor
 {
     //-----------------------------VARIABLES-----------------------------
     private int amountDucky = 0;
+    private int amount = 0;
     private int x = 0;
     private int y = 0;
     private Thief thief = new Thief();
+    private Win win = new Win();
+    public GreenfootSound backgroundMusic = new GreenfootSound("soundtrack.wav");
+    Background thisGame;
     
     //-----------------------------FUNCIONES-----------------------------
     //-----Función de acción-----
     public void act() 
     {
+        backgroundMusic.playLoop();
         //Asignar una varible que detecte si se intersecta con el objeto de "DuckyChest"
         Actor duckyChest = getOneIntersectingObject(DuckyChest.class);
         
@@ -50,8 +55,14 @@ public class Shovel extends Actor
         
         //Si el tesoro está ahí:
         if (chest != null) {
+            getWorld().addObject(new Win(), 350, 450);
+            thisGame.chest ++;
             //Genera un nuevo mundo (nuevo nivel)
             Greenfoot.setWorld(new Background());
+            if (backgroundMusic.isPlaying()) {
+                backgroundMusic.pause();
+            }
+            
         }
     }
     

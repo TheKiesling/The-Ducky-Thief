@@ -23,6 +23,7 @@ public class Thief extends Actor
     //-----------------------------VARIABLES-----------------------------
     private int x;
     private int y;
+    Background thisGame;
     
     //-----------------------------FUNCIONES-----------------------------
     //-----Función de acción-----
@@ -44,13 +45,17 @@ public class Thief extends Actor
         //Si toca a Henry Avery lo mata, y tiene que iniciar un nuevo juego
         Actor henry_Avery = getOneIntersectingObject(Henry_Avery.class);
         if (henry_Avery != null) {
-            Greenfoot.setWorld(new Background());
+            Greenfoot.stop();
+            thisGame.chest = 0;
+            thisGame.kills = 0;
         }
         
         //Si el ladrón encuentra el tesoro, tiene que iniciar un nuevo juego
         Actor chest = getOneIntersectingObject(Chest.class);
-        if (chest != null) {
-            Greenfoot.setWorld(new Background());
+        if (chest != null) {        
+            Greenfoot.stop();
+            thisGame.chest = 0;
+            thisGame.kills = 0;
         }
 
     }    

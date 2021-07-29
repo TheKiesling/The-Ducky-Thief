@@ -1,24 +1,12 @@
-/*
-#      #    #######    ########   #######   #          #######   ##      #    #########
-#     #        #       #          #         #             #      # #     #    #
-#    #         #       #          #         #             #      #  #    #    #
-####           #       #####      #######   #             #      #   #   #    #    ####
-#    #         #       #                #   #             #      #    #  #    #       #
-#     #        #       #                #   #             #      #     # #    #       #
-#      #    ########   ########   #######   ########   #######   #      ##    #########
- */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Thief here.
- * Clase del ladrón (enemigo)
+ * Write a description of class Fast_Thief here.
  * 
- * @author (José Pablo Kiesling Lange) 
- * @version 
- *          (Creación: 21/07/2021)
- *          (Primera modificación: 21/07/2021)
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Thief extends Actor
+public class Fast_Thief extends Actor
 {
     //-----------------------------VARIABLES-----------------------------
     private int x;
@@ -33,7 +21,7 @@ public class Thief extends Actor
         x = getX();
         y = getY();
         
-        move(2);
+        move(4);
         
         //Giro del personaje usando números randoms
         if (Greenfoot.getRandomNumber(100) < 10)

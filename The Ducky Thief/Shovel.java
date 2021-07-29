@@ -26,6 +26,7 @@ public class Shovel extends Actor
     private int x = 0;
     private int y = 0;
     private Thief thief = new Thief();
+    private Fast_Thief fastThief = new Fast_Thief();
     private Win win = new Win();
     public GreenfootSound backgroundMusic = new GreenfootSound("soundtrack.wav");
     Background thisGame;
@@ -41,14 +42,37 @@ public class Shovel extends Actor
         //Si el tesoro no está ahí:
         if (duckyChest != null) {
             x = y = 0;
-            //Genera un enemigo en la izquierda (1) o derecha (2)
-            if (Greenfoot.getRandomNumber(2) == 1)
-                x = getRandom(50,75);
-            else
-                x = getRandom(600,675);
-            y = getRandom(200,550);
-            getWorld().removeObject(duckyChest);
-            getWorld().addObject(new Thief(), x, y);
+            if(thisGame.chest < 5){
+                //Genera un enemigo en la izquierda (1) o derecha (2)
+                if (Greenfoot.getRandomNumber(2) == 1)
+                    x = getRandom(50,75);
+                else
+                    x = getRandom(600,675);
+                y = getRandom(200,550);
+                getWorld().removeObject(duckyChest);
+                getWorld().addObject(new Thief(), x, y);
+            }
+            else{
+                if (Greenfoot.getRandomNumber(4) == 1){
+                    if (Greenfoot.getRandomNumber(2) == 1)
+                        x = getRandom(50,75);
+                    else
+                        x = getRandom(600,675);
+                    y = getRandom(200,550);
+                    getWorld().removeObject(duckyChest);
+                    getWorld().addObject(new Thief(), x, y);
+                }
+                else
+                    if (Greenfoot.getRandomNumber(2) == 1)
+                        x = getRandom(50,75);
+                    else
+                        x = getRandom(600,675);
+                    y = getRandom(200,550);
+                    getWorld().removeObject(duckyChest);
+                    getWorld().addObject(new Fast_Thief(), x, y);
+                    
+            }
+            
         }
         //Asignar una varible que detecte si se intersecta con el objeto de "DuckyChest"
         Actor chest = getOneIntersectingObject(Chest.class);

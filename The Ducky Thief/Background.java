@@ -35,6 +35,8 @@ public class Background extends World
     {
         Henry_Avery henry_Avery = new Henry_Avery();
         addObject(henry_Avery,350,400);
+        logo l = new logo();
+        addObject(l, 60,40);
         Greenfoot.delay(250);        
     }
     
@@ -45,7 +47,7 @@ public class Background extends World
     
     public void act(){ 
         
-        showText("Chest: " + chest, 120,30);
+        showText(": " + chest, 120,30);
         
         while (amountDucky < 6){
             x = y = 0;

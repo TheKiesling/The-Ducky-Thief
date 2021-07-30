@@ -12,8 +12,7 @@ public class Background extends World
     private int amountChest = 0;
     private int x = 0;
     private int y = 0;
-    public static int chest = 0;
-    public static int kills = 0;
+    private static int chest = 0;
     
     /**
      * Constructor for objects of class Background.
@@ -26,7 +25,19 @@ public class Background extends World
         prepare();
        
     }
-
+    
+    public static void setChest(int points){
+        chest = points;
+    }
+    
+    public static int getChest(){
+        return chest;
+    }
+    
+    public static void addChest(){
+        chest++;
+    }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

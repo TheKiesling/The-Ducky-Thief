@@ -42,7 +42,7 @@ public class Shovel extends Actor
         //Si el tesoro no está ahí:
         if (duckyChest != null) {
             x = y = 0;
-            if(thisGame.chest < 5){
+            if(thisGame.getChest() < 5){
                 //Genera un enemigo en la izquierda (1) o derecha (2)
                 if (Greenfoot.getRandomNumber(2) == 1)
                     x = getRandom(50,75);
@@ -80,7 +80,7 @@ public class Shovel extends Actor
         //Si el tesoro está ahí:
         if (chest != null) {
             getWorld().addObject(new Win(), 350, 450);
-            thisGame.chest ++;
+            thisGame.addChest();
             //Genera un nuevo mundo (nuevo nivel)
             Greenfoot.setWorld(new Background());
             if (backgroundMusic.isPlaying()) {

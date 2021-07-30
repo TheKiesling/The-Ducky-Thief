@@ -48,8 +48,7 @@ public class Thief extends Actor
         if (henry_Avery != null) {
             getWorld().addObject(new Death(), 350, 350);
             Greenfoot.stop();
-            thisGame.chest = 0;
-            thisGame.kills = 0;
+            thisGame.setChest(0);
         }
         
         //Si el ladrón encuentra el tesoro, tiene que iniciar un nuevo juego
@@ -57,8 +56,7 @@ public class Thief extends Actor
         if (chest != null) { 
             getWorld().addObject(new Death(), 350, 350);
             Greenfoot.stop();
-            thisGame.chest = 0;
-            thisGame.kills = 0;
+            thisGame.setChest(0);
         }
 
     }    

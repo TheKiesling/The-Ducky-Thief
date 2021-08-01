@@ -17,6 +17,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 
  *          (Creación: 21/07/2021)
  *          (Primera modificación: 21/07/2021)
+ *          (Segunda modificación: 29/07/2021)
  */
 public class Thief extends Actor
 {
@@ -54,8 +55,11 @@ public class Thief extends Actor
         //Si el ladrón encuentra el tesoro, tiene que iniciar un nuevo juego
         Actor chest = getOneIntersectingObject(Chest.class);
         if (chest != null) { 
+            //Animación de muerte
             getWorld().addObject(new Death(), 350, 350);
+            //Parar el mundo
             Greenfoot.stop();
+            //Colocar la puntuación en 0
             thisGame.setChest(0);
         }
 

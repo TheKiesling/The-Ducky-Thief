@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=Background
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Background\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Background\ here.\r\n\ Clase\ del\ mundo\r\n\ \r\n\ @author\ (Jos\u00E9\ Pablo\ Kiesling\ Lange)\ \r\n\ @version\ \r\n\ \ \ \ \ \ \ \ \ \ (Creaci\u00F3n\:\ 20/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Primera\ modificaci\u00F3n\:\ 20/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Segunda\ modificaci\u00F3n\:\ 21/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Tercera\ modificaci\u00F3n\:\ 28/07/2021)\r\n\ \ \ \ \ \ \ \ \ \ (Cuarta\ modificaci\u00F3n\:\ 29/07/2021)\r\n
 comment1.params=
 comment1.target=Background()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Background.\r\n\ \r\n
 comment2.params=points
 comment2.target=void\ setChest(int)
 comment3.params=
@@ -12,7 +11,6 @@ comment4.params=
 comment4.target=void\ addChest()
 comment5.params=
 comment5.target=void\ prepare()
-comment5.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 comment6.params=begin\ end
 comment6.target=int\ getRandom(int,\ int)
 comment7.params=

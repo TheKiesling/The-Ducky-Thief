@@ -17,6 +17,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 
  *          (Creación: 21/07/2021)
  *          (Primera modificación: 21/07/2021)
+ *          (Segunda modificación: 28/07/2021)
+ *          (Tercera modificación: 29/07/2021)
  */
 public class Shovel extends Actor
 {
@@ -28,14 +30,17 @@ public class Shovel extends Actor
     private Thief thief = new Thief();
     private Fast_Thief fastThief = new Fast_Thief();
     private Win win = new Win();
-    public GreenfootSound backgroundMusic = new GreenfootSound("soundtrack.wav");
+    private GreenfootSound backgroundMusic = new GreenfootSound("soundtrack.wav");
     Background thisGame;
     
     //-----------------------------FUNCIONES-----------------------------
     //-----Función de acción-----
     public void act() 
     {
+        //Suena la música
         backgroundMusic.playLoop();
+        backgroundMusic.setVolume(25);
+        
         //Asignar una varible que detecte si se intersecta con el objeto de "DuckyChest"
         Actor duckyChest = getOneIntersectingObject(DuckyChest.class);
         
@@ -79,10 +84,14 @@ public class Shovel extends Actor
         
         //Si el tesoro está ahí:
         if (chest != null) {
+            //Animación de victoria
             getWorld().addObject(new Win(), 350, 450);
-            thisGame.addChest();
+            //Aumenta la puntuación
+            thisGame.addChest(); 
             //Genera un nuevo mundo (nuevo nivel)
             Greenfoot.setWorld(new Background());
+            
+            //Cuando se pase de nivel, se pausa la música
             if (backgroundMusic.isPlaying()) {
                 backgroundMusic.pause();
             }

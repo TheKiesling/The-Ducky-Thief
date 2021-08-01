@@ -1,10 +1,22 @@
+/*
+#      #    #######    ########   #######   #          #######   ##      #    #########
+#     #        #       #          #         #             #      # #     #    #
+#    #         #       #          #         #             #      #  #    #    #
+####           #       #####      #######   #             #      #   #   #    #    ####
+#    #         #       #                #   #             #      #    #  #    #       #
+#     #        #       #                #   #             #      #     # #    #       #
+#      #    ########   ########   #######   ########   #######   #      ##    #########
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Fast_Thief here.
+ * Clase del ladrón rápido (enemigo)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (José Pablo Kiesling Lange) 
+ * @version 
+ *          (Creación: 29/07/2021)
+ *          (Primera modificación: 29/07/2021)
  */
 public class Fast_Thief extends Actor
 {
@@ -34,16 +46,22 @@ public class Fast_Thief extends Actor
         //Si toca a Henry Avery lo mata, y tiene que iniciar un nuevo juego
         Actor henry_Avery = getOneIntersectingObject(Henry_Avery.class);
         if (henry_Avery != null) {
+            //Animación de muerte
             getWorld().addObject(new Death(), 350, 350);
+            //Parar el mundo
             Greenfoot.stop();
+            //Colocar la puntuación en 0
             thisGame.setChest(0);
         }
         
         //Si el ladrón encuentra el tesoro, tiene que iniciar un nuevo juego
         Actor chest = getOneIntersectingObject(Chest.class);
         if (chest != null) { 
+            //Animación de muerte
             getWorld().addObject(new Death(), 350, 350);
+            //Parar el mundo
             Greenfoot.stop();
+            //Colocar la puntuación en 0
             thisGame.setChest(0);
         }
 

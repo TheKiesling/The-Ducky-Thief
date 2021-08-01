@@ -47,7 +47,7 @@ public class Gun extends Actor
     }   
     
     //-----Función de disparar-----
-    public void fire(){
+    private void fire(){
         //Crea una bala y la posiciona en donde se encuentra la pistola y la dirección de esta
         Bullet bullet = new Bullet();
         getWorld().addObject(bullet, getX(), getY()+5);
